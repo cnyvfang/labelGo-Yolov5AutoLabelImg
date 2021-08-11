@@ -3,15 +3,15 @@
 
 ## Installation and use
 <p>1.Fetching projects from Git</p>
-```
+```shell
 git clone https://github.com/cnyvfang/labelGo.git
 ```
 <p>2.Switching the operating directory to the project directory</p>
-```
+```shell
 cd labelGo
 ```
 <p>3.Installation environment</p>
-```
+```shell
 pip install -r requirements.txt
 ```
 <p></p>
