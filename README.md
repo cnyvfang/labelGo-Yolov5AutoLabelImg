@@ -2,7 +2,7 @@
 <p>A graphical Semi-automatic annotation tool based on <a href="https://github.com/tzutalin/labelImg">labelImg</a></p>
 
 ## Installation and use
-<p>1.Fetching projects from Git</p>
+<p>1.Fetching projects from git</p>
 
 ```bash
 git clone https://github.com/cnyvfang/labelGo.git
@@ -20,5 +20,8 @@ cd labelGo
 pip install -r requirements.txt
 ```
 
-<p></p>
-<p></p>
+<p>4.Launching applications</p>
+
+```bash
+python labelGo.py
+```
