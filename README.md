@@ -1,7 +1,7 @@
 <h1>labelGo</h1>
 <p>A graphical Semi-automatic annotation tool based on <a href="https://github.com/tzutalin/labelImg">labelImg</a></p>
 
-![image](https:/raw.githubusercontent.com/cnyvfang/labelGo/master/demo/demo1.gif) 
+![image](https://raw.githubusercontent.com/cnyvfang/labelGo/master/demo/demo1.gif) 
 
 ## Installation and use
 <p>1.Fetching projects from git</p>
