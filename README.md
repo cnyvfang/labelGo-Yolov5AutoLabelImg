@@ -1,8 +1,9 @@
 <h1>labelGo</h1>
-[简体中文]:(https://github.com/cnyvfang/labelGo/blob/master/demo/demo1.gif) 
+[简体中文]:(https://github.com/cnyvfang/labelGo/blob/master/readme_zh_cn.md) 
+
 <p>A graphical Semi-automatic annotation tool based on <a href="https://github.com/tzutalin/labelImg">labelImg</a></p>
 
-![image](https://github.com/cnyvfang/labelGo/blob/master/readme_zh_cn.md) 
+![image](https://github.com/cnyvfang/labelGo/blob/master/demo/demo1.gif) 
 
 ## Installation and use
 <p>1.Fetching projects from git</p>
