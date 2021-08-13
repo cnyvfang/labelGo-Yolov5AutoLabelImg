@@ -1,7 +1,7 @@
 <h1>labelGo</h1>
 <p>Guide Language:<a href="https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg/blob/master/readme_zh_cn.md">简体中文</a></p>
 <p>A graphical Semi-automatic annotation tool based on <a href="https://github.com/tzutalin/labelImg">labelImg</a> and Yolov5</p>
-
+<p>Semi-automatic annotation of datasets by existing yolov5 pytorch models</p>
 ![image](https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg/blob/master/demo/demo1.gif) 
 
 ## Installation and use
