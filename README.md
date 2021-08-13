@@ -1,5 +1,5 @@
 <h1>labelGo</h1>
-![简体中文]:(https://github.com/cnyvfang/labelGo/blob/master/readme_zh_cn.md) 
+[简体中文](https://github.com/cnyvfang/labelGo/blob/master/readme_zh_cn.md) 
 
 <p>A graphical Semi-automatic annotation tool based on <a href="https://github.com/tzutalin/labelImg">labelImg</a></p>
 
