@@ -1,7 +1,6 @@
 <h1>labelGo</h1>
 <p>Guide Language:<a href="https://github.com/cnyvfang/labelGo/blob/master/readme_zh_cn.md">简体中文</a></p>
 <br>
-
 <p>A graphical Semi-automatic annotation tool based on <a href="https://github.com/tzutalin/labelImg">labelImg</a></p>
 
 ![image](https://github.com/cnyvfang/labelGo/blob/master/demo/demo1.gif) 
