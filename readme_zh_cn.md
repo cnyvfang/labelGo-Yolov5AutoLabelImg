@@ -12,13 +12,13 @@
 <p>1.从 git 中获取项目</p>
 
 ```bash
-git clone https://github.com/cnyvfang/labelGo.git
+git clone https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg.git
 ```
 
 <p>2.切换操作目录到工程目录</p>
 
 ```bash
-cd labelGo
+cd labelGo-Yolov5AutoLabelImg
 ```
 
 <p>3.配置环境</p>
