@@ -1317,7 +1317,7 @@ class MainWindow(QMainWindow, WindowMixin):
 
 
     def auto_label(self):
-        attention_get = QMessageBox.question(self, 'Attention', '此操作将会清除所有的原有标注文件，点击Yes以选择YOLOv5权重并继续。', QMessageBox.Yes | QMessageBox.No)  # 创建一个二次确认框
+        attention_get = QMessageBox.question(self, 'Attention', 'This operation will clear all the original annotation files. Click Yes to select the yolov5 weight and continue.此操作将会清除所有的原有标注文件，点击Yes以选择YOLOv5权重并继续。', QMessageBox.Yes | QMessageBox.No)  # 创建一个二次确认框
         if attention_get == QMessageBox.Yes:
             if not self.last_open_dir:
                 self.last_open_dir='./images'
