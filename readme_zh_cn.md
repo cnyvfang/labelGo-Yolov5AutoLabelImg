@@ -3,7 +3,12 @@
 <p>通过现有的yolov5 pytorch模型对数据集进行半自动标注</p>
 
 ![image](https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg/blob/master/demo/demo1.gif) 
-## Installation and use
+
+## 注意
+<p>如果遇到问题，欢迎在issue中提出</p>
+<p>请提前将classes.txt放置于被标注数据集文件夹下</p>
+
+## 使用方法
 <p>1.从 git 中获取项目</p>
 
 ```bash
