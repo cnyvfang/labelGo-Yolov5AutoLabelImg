@@ -13,13 +13,13 @@
 <p>1.Fetching projects from git</p>
 
 ```bash
-git clone https://github.com/cnyvfang/labelGo.git
+git clone https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg.git
 ```
 
 <p>2.Switching the operating directory to the project directory</p>
 
 ```bash
-cd labelGo
+cd labelGo-Yolov5AutoLabelImg
 ```
 
 <p>3.Installation environment</p>
