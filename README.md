@@ -5,6 +5,10 @@
 
 ![image](https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg/blob/master/demo/demo1.gif) 
 
+## Attention
+<p>If there is a problem, please put it forward in the issue</p>
+<p>Please put classes.txt under the marked dataset folder in advance</p>
+
 ## Installation and use
 <p>1.Fetching projects from git</p>
 
