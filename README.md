@@ -33,3 +33,9 @@ pip install -r requirements.txt
 ```bash
 python labelGo.py
 ```
+
+<p>5. Click on the "Open directory" button to select the folder where the images are stored</p>
+
+<p>6. Click on the "Auto Annotate" button to confirm that the information is correct and then select the trained yolov5 pytorch model to complete the auto annotation</p>
+
+<p>7. Adjust the automatic annotation results according to the actual requirements and save them</p>
