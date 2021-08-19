@@ -10,6 +10,8 @@
 <p>Please put classes.txt under the marked dataset folder in advance</p>
 <p>The annotation file is saved in the same location as the picture folder</p>
 <p>Recommended version of python: python 3.8</p>
+<p>Recommended for conda environments</p>
+
 
 ## Installation and use
 <p>1.Fetching projects from git</p>
