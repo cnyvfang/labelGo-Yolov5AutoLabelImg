@@ -11,6 +11,7 @@
 <p>The annotation file is saved in the same location as the picture folder</p>
 <p>Recommended version of python: python 3.8</p>
 <p>Recommended for conda environments</p>
+<p>The project is prohibited from commercial use </p>
 
 
 ## Installation and use
