@@ -54,6 +54,7 @@ from libs.ustr import ustr
 from libs.hashableQListWidgetItem import HashableQListWidgetItem
 from libs.autoLabeler import *
 from libs import autoLabeler
+from libs.yolo2voc import *
 
 __appname__ = 'labelGo_Based on labelImg'
 
@@ -88,16 +89,16 @@ class MainWindow(QMainWindow, WindowMixin):
         self.settings = Settings()
         self.settings.load()
         settings = self.settings
-
+        self.settings.reset()
         self.os_name = platform.system()
 
         # Load string bundle for i18n
         self.string_bundle = StringBundle.get_bundle()
         get_str = lambda str_id: self.string_bundle.get_string(str_id)
 
-        # Save as Pascal voc xml
+        # Save as yolo
         self.default_save_dir = default_save_dir
-        self.label_file_format = settings.get(SETTING_LABEL_FILE_FORMAT, LabelFileFormat.PASCAL_VOC)
+        self.label_file_format = settings.get(SETTING_LABEL_FILE_FORMAT, LabelFileFormat.YOLO)
 
         # For loading all image under a directory
         self.m_img_list = []
@@ -112,7 +113,7 @@ class MainWindow(QMainWindow, WindowMixin):
 
         self._no_selection_slot = False
         self._beginner = True
-        self.screencast = "https://youtu.be/p0nR2YsCY_U"
+        self.screencast = "https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg"
 
         # Load predefined classes to the list
         self.load_predefined_classes(default_prefdef_class_file)
@@ -249,7 +250,7 @@ class MainWindow(QMainWindow, WindowMixin):
             if format == LabelFileFormat.PASCAL_VOC:
                 return '&PascalVOC', 'format_voc'
             elif format == LabelFileFormat.YOLO:
-                return '&YOLO', 'format_yolo'
+                return '&YOLO(TO VOC)', 'format_yolo'
             elif format == LabelFileFormat.CREATE_ML:
                 return '&CreateML', 'format_createml'
 
@@ -299,7 +300,7 @@ class MainWindow(QMainWindow, WindowMixin):
                           'Ctrl+A', 'hide', get_str('showAllBoxDetail'),
                           enabled=False)
 
-        help_default = action(get_str('tutorialDefault'), self.show_default_tutorial_dialog, None, 'help', get_str('tutorialDetail'))
+        help_default = action("Github Page", self.show_default_tutorial_dialog, None, 'help', get_str('tutorialDetail'))
         show_info = action(get_str('info'), self.show_info_dialog, None, 'help', get_str('info'))
         show_shortcut = action(get_str('shortcut'), self.show_shortcuts_dialog, None, 'help', get_str('shortcut'))
 
@@ -365,7 +366,7 @@ class MainWindow(QMainWindow, WindowMixin):
         self.draw_squares_option.triggered.connect(self.toggle_draw_square)
 
         # Store actions for further handling.
-        self.actions = Struct(save=save, save_format=save_format, saveAs=save_as, open=open, close=close, resetAll=reset_all, deleteImg=delete_image,
+        self.actions = Struct(save=save, save_format=save_format, save_format_beginner=save_format_beginner, saveAs=save_as, open=open, close=close, resetAll=reset_all, deleteImg=delete_image,
                               lineColor=color1, create=create, delete=delete, edit=edit, copy=copy,
                               createMode=create_mode, editMode=edit_mode, advancedMode=advanced_mode,
                               shapeLineColor=shape_line_color, shapeFillColor=shape_fill_color,
@@ -410,7 +411,7 @@ class MainWindow(QMainWindow, WindowMixin):
         self.display_label_option.triggered.connect(self.toggle_paint_labels_option)
 
         add_actions(self.menus.file,
-                    (open, open_dir, change_save_dir, open_annotation, copy_prev_bounding, self.menus.recentFiles, save, save_format, save_as, close, reset_all, delete_image, quit))
+                    (open, open_dir, change_save_dir, open_annotation, copy_prev_bounding, self.menus.recentFiles, save, save_format, save_format_beginner, save_as, close, reset_all, delete_image, quit))
         add_actions(self.menus.help, (help_default, show_info, show_shortcut))
         add_actions(self.menus.view, (
             self.auto_saving,
@@ -434,7 +435,7 @@ class MainWindow(QMainWindow, WindowMixin):
         #     open, open_dir, change_save_dir, open_next_image, open_prev_image, verify, save, save_format, None, create, copy, delete, None,
         #     zoom_in, zoom, zoom_out, fit_window, fit_width)
         self.actions.beginner = (
-            open_dir,  open_next_image, open_prev_image, verify, save, save_format_beginner,autolabel, create, copy, delete,
+            open_dir,  open_next_image, open_prev_image, verify, save, save_format_beginner, autolabel, create, copy, delete,
             zoom_in,  zoom_out, fit_window, fit_width,edit)
 
         self.actions.advanced = (
@@ -553,6 +554,20 @@ class MainWindow(QMainWindow, WindowMixin):
             self.label_file_format = LabelFileFormat.CREATE_ML
             LabelFile.suffix = JSON_EXT
 
+    def set_format_beginner(self, save_format_beginner):
+        if save_format_beginner == FORMAT_PASCALVOC:
+            self.actions.save_format_beginner.setText(FORMAT_PASCALVOC)
+            self.actions.save_format_beginner.setIcon(new_icon("format_voc"))
+            self.label_file_format = LabelFileFormat.PASCAL_VOC
+            LabelFile.suffix = XML_EXT
+
+        elif save_format_beginner == FORMAT_YOLO:
+            self.actions.save_format_beginner.setText(FORMAT_YOLO)
+            self.actions.save_format_beginner.setIcon(new_icon("format_yolo"))
+            self.label_file_format = LabelFileFormat.YOLO
+            LabelFile.suffix = TXT_EXT
+
+
     def change_format(self):
         if self.label_file_format == LabelFileFormat.PASCAL_VOC:
             self.set_format(FORMAT_YOLO)
@@ -566,14 +581,25 @@ class MainWindow(QMainWindow, WindowMixin):
 
     def change_format_beginner(self):
         if self.label_file_format == LabelFileFormat.PASCAL_VOC:
-            self.set_format(FORMAT_YOLO)
+            self.set_format_beginner(FORMAT_YOLO)
+
         elif self.label_file_format == LabelFileFormat.YOLO:
-            self.set_format(FORMAT_YOLO)
+            self.set_format_beginner(FORMAT_PASCALVOC)
+            ########### translate to Voc ############
+            attention_get = QMessageBox.question(self, 'Attention',
+                                                 '是否执行：将YOLO格式的标签转换为VOC格式的标签 \n Execute: convert labels in Yolo format to labels in VOC format',
+                                                 QMessageBox.Yes | QMessageBox.No)  # 创建一个二次确认框
+            if attention_get == QMessageBox.Yes:
+                txtLabel_to_xmlLabel(self.last_open_dir+'/classes.txt',self.last_open_dir,self.last_open_dir)
+            #########################################
+
         elif self.label_file_format == LabelFileFormat.CREATE_ML:
-            self.set_format(FORMAT_YOLO)
+            self.set_format_beginner(FORMAT_YOLO)
         else:
-            self.set_format(FORMAT_YOLO)
-        # self.set_dirty()
+            raise ValueError('Unknown label file format.')
+        # self.set_dirty() ## Allow to use save button
+
+
 
     def no_shapes(self):
         return not self.items_to_shapes
@@ -1360,15 +1386,11 @@ class MainWindow(QMainWindow, WindowMixin):
             self.setWindowTitle('Labeling...')
 
             run(**vars(opt))
-                    
-                    
+
             self.import_dir_images(self.last_open_dir)
             self.setWindowTitle(__appname__)
 
 #saved_path
-
-
-
 
 
     def import_dir_images(self, dir_path):
