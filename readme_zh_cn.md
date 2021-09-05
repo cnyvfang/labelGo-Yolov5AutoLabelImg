@@ -1,5 +1,5 @@
 <h1>labelGo</h1>
-<p>一个基于<a href="https://github.com/tzutalin/labelImg">labelImg</a>与Yolov5算法的半自动标注工具</p>
+<p>一个基于<a href="https://github.com/tzutalin/labelImg">labelImg</a>与<a href="https://github.com/ultralytics/yolov5">YOLOv5</a>算法的半自动标注工具</p>
 <p>通过现有的yolov5 pytorch模型对数据集进行半自动标注</p>
 
 ## YOLOv5半自动标注功能演示
@@ -13,7 +13,7 @@
 <p>标注文件保存位置与图片文件夹相同</p>
 <p>推荐使用的Python版本：Python3.8</p>
 <p>建议使用conda环境进行操作</p>
-<p>该项目完全免费，不会进行任何商业出售</p>
+<p>该项目完全免费，不会且禁止进行任何商业出售</p>
 
 
 ## 使用方法
