@@ -3,7 +3,10 @@
 <p>A graphical Semi-automatic annotation tool based on <a href="https://github.com/tzutalin/labelImg">labelImg</a> and Yolov5</p>
 <p>Semi-automatic annotation of datasets by existing yolov5 pytorch models</p>
 
+## Demonstration of semi-automatic labeling function
 ![image](https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg/blob/master/demo/demo1.gif) 
+## Function demonstration of converting Yolo format to VOC format with one click
+![image](https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg/blob/master/demo/demo2.gif) 
 
 ## Attention
 <p>If there is a problem, please put it forward in the issue</p>
