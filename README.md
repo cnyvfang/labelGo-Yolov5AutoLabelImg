@@ -15,6 +15,7 @@
 <p>Recommended version of python: python 3.8</p>
 <p>Recommended for conda environments</p>
 <p>The item is completely free and it is forbidden to sell the item in any way. </p>
+<p>Note: This project only supports Version 5 of YOLOv5 for the time being.</p>
 
 
 ## Installation and use
