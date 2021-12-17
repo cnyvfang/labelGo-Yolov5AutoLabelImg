@@ -37,14 +37,16 @@ cd labelGo-Yolov5AutoLabelImg
 pip install -r requirements.txt
 ```
 
-<p>4.Launching applications</p>
+<p>4.Modify the contents of the /data/predefined_classes.txt file in the directory to your own category</p>
+
+<p>5.Launching applications</p>
 
 ```bash
 python labelGo.py
 ```
 
-<p>5. Click on the "Open directory" button to select the folder where the images are stored</p>
+<p>6. Click on the "Open directory" button to select the folder where the images are stored</p>
 
-<p>6. Click on the "Auto Annotate" button to confirm that the information is correct and then select the trained yolov5 pytorch model to complete the auto annotation</p>
+<p>7. Click on the "Auto Annotate" button to confirm that the information is correct and then select the trained yolov5 pytorch model to complete the auto annotation</p>
 
-<p>7. Adjust the automatic annotation results according to the actual requirements and save them</p>
+<p>8. Adjust the automatic annotation results according to the actual requirements and save them</p>
