@@ -36,13 +36,15 @@ cd labelGo-Yolov5AutoLabelImg
 pip install -r requirements.txt
 ```
 
-<p>4.启动应用程序</p>
+<p>4.将目录中的/data/predefined_classes.txt文件的内容修改为你自己的类别</p>
+
+<p>5.启动应用程序</p>
 
 ```bash
 python labelGo.py
 ```
-<p>5.点击“打开目录”按钮选择存放图片的文件夹</p>
+<p>6.点击“打开目录”按钮选择存放图片的文件夹</p>
 
-<p>6.点击“自动标注”按钮确认信息无误后选择已训练的yolov5 pytorch模型完成自动标注</p>
+<p>7.点击“自动标注”按钮确认信息无误后选择已训练的yolov5 pytorch模型完成自动标注</p>
 
-<p>7.根据实际要求，对自动标注结果进行调整后保存即可</p>
+<p>8.根据实际要求，对自动标注结果进行调整后保存即可</p>
