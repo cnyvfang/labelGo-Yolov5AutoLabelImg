@@ -49,7 +49,9 @@ class StringBundle:
 
     def __create_lookup_fallback_list(self, locale_str):
         result_paths = []
-        base_path = ":/strings-zh-CN"
+        base_path = ":/strings"
+#         如果需要使用中文，注释上句（52行），取消注释下句（54行）
+#         base_path = ":/strings-zh-CN"
         result_paths.append(base_path)
         if locale_str is not None:
             # Don't follow standard BCP47. Simple fallback
