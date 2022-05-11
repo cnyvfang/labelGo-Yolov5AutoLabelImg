@@ -15,6 +15,7 @@
 <p>建议使用conda环境进行操作</p>
 <p>该项目完全免费，不会且禁止进行任何商业出售</p>
 <p>注意：该项目暂时仅支持YOLOv5的Version 5版本</p>
+<p>切换中文版本请编辑\libs\stringBundle.py，注释第52行，取消注释54行。（原理：":/strings"替换为":/strings-zh-CN"）</p>
 
 
 ## 使用方法
@@ -37,6 +38,8 @@ pip install -r requirements.txt
 ```
 
 <p>4.将目录中的/data/predefined_classes.txt文件的内容修改为你自己的类别</p>
+
+<p>4.5（可选）.变更成中文版，请编辑\libs\stringBundle.py，注释第52行，取消注释54行。</p>
 
 <p>5.启动应用程序</p>
 
