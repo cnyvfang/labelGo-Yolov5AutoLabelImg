@@ -4,7 +4,7 @@
 <p>Semi-automatic annotation of datasets by existing yolov5 pytorch models</p>
 
 ## News
-labelGo now supports the latest version of YOLOv5.
+**labelGo now supports the latest version of YOLOv5, and automatic classes.txt file generation**
 
 ## Demonstration of semi-automatic labeling function
 ![image](https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg/blob/master/demo/demo1.gif) 
