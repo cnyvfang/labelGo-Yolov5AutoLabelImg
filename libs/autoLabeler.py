@@ -1,7 +1,7 @@
 import argparse
 import time
 from pathlib import Path
-
+import os
 import cv2
 import torch
 import torch.backends.cudnn as cudnn
@@ -48,7 +48,6 @@ def run(weights='yolov5s.pt',  # model.pt path(s)
 
     # Directories
     save_dir = increment_path(Path(source) / name, exist_ok=exist_ok)  # increment run
-
     # Initialize
     set_logging()
     device = select_device(device)
@@ -62,6 +61,9 @@ def run(weights='yolov5s.pt',  # model.pt path(s)
         model = attempt_load(weights, map_location=device)  # load FP32 model
         stride = int(model.stride.max())  # model stride
         names = model.module.names if hasattr(model, 'module') else model.names  # get class names
+        with open(os.path.join(source,"classes.txt"),"w") as f:
+            [f.write(name+"\n") for name in names]
+
         if half:
             model.half()  # to FP16
         if classify:  # second-stage classifier
