@@ -1,4 +1,4 @@
-## labelGo
+# labelGo
 
 <p>一个基于<a href="https://github.com/tzutalin/labelImg">labelImg</a>与<a href="https://github.com/ultralytics/yolov5">YOLOv5</a>算法的半自动标注工具</p>
 <p>通过现有的YOLOv5 Pytorch模型对数据集进行半自动标注</p>
@@ -12,12 +12,11 @@
 ![image](https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg/blob/master/demo/demo2.gif) 
 
 ## 注意
-<p>如果遇到问题，欢迎在issue中提出</p>
-<p>请提前将classes.txt放置于被标注数据集文件夹下</p>
-<p>标注文件保存位置与图片文件夹相同</p>
-<p>推荐使用的Python版本：Python3.8</p>
-<p>建议使用conda环境进行操作</p>
-<p>该项目完全免费，不会且禁止进行任何商业出售</p>
+<p>如果遇到问题，欢迎在issue中提出。</p>
+<p>标注文件保存位置与图片文件夹相同。</p>
+<p>推荐使用的Python版本：Python3.8。</p>
+<p>建议使用conda环境进行操作。</p>
+<p>该项目完全免费，不会且禁止进行任何商业出售。</p>
 <p>该项目已支持最新版本YOLOv5，如需要使用支持YOLOv5 version5的旧版本，可以在Release中找到旧版本代码。</p>
 <p>切换中文版本请编辑\libs\stringBundle.py，注释第52行，取消注释54行。（原理：":/strings"替换为":/strings-zh-CN"）</p>
 
@@ -41,9 +40,7 @@ cd labelGo-Yolov5AutoLabelImg
 pip install -r requirements.txt
 ```
 
-<p>4.将目录中的/data/predefined_classes.txt文件的内容修改为你自己的类别</p>
-
-<p>4.5（可选）.变更成中文版，请编辑\libs\stringBundle.py，注释第52行，取消注释54行。</p>
+<p>4（可选）.变更成中文版，请编辑\libs\stringBundle.py，注释第52行，取消注释54行。</p>
 
 <p>5.启动应用程序</p>
 
