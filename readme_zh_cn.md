@@ -1,12 +1,10 @@
-<h1>labelGo</h1>
+## labelGo
 
 <p>一个基于<a href="https://github.com/tzutalin/labelImg">labelImg</a>与<a href="https://github.com/ultralytics/yolov5">YOLOv5</a>算法的半自动标注工具</p>
 <p>通过现有的YOLOv5 Pytorch模型对数据集进行半自动标注</p>
 
 ## News
 **现已支持最新版本YOLOv5**
-
-
 
 ## YOLOv5半自动标注功能演示
 ![image](https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg/blob/master/demo/demo1.gif) 
@@ -57,3 +55,7 @@ python labelGo.py
 <p>7.点击“自动标注”按钮确认信息无误后选择已训练的yolov5 pytorch模型完成自动标注</p>
 
 <p>8.根据实际要求，对自动标注结果进行调整后保存即可</p>
+
+## 致谢
+<p>感谢[tangtang666](https://github.com/tangtang666)提交的针对最新版YOLOv5的支持</p>
+<p>感谢[Iceprism](https://github.com/Iceprism)对中文版Bug的修复</p>
