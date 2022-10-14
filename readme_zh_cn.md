@@ -57,5 +57,6 @@ python labelGo.py
 <p>8.根据实际要求，对自动标注结果进行调整后保存即可</p>
 
 ## 致谢
-<p>感谢[tangtang666](https://github.com/tangtang666)提交的针对最新版YOLOv5的支持</p>
-<p>感谢[Iceprism](https://github.com/Iceprism)对中文版Bug的修复</p>
+感谢[tangtang666](https://github.com/tangtang666)提交的针对最新版YOLOv5的支持
+
+感谢[Iceprism](https://github.com/Iceprism)对中文版Bug的修复
