@@ -4,7 +4,7 @@
 <p>通过现有的YOLOv5 Pytorch模型对数据集进行半自动标注</p>
 
 ## News
-**现已支持最新版本YOLOv5**
+**现已支持最新版本YOLOv5以及classes.txt的自动生成**
 
 ## YOLOv5半自动标注功能演示
 ![image](https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg/blob/master/demo/demo1.gif) 
