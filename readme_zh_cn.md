@@ -1,10 +1,12 @@
 <h1>labelGo</h1>
 
-## News
-*现已支持最新版本YOLOv5*
-
 <p>一个基于<a href="https://github.com/tzutalin/labelImg">labelImg</a>与<a href="https://github.com/ultralytics/yolov5">YOLOv5</a>算法的半自动标注工具</p>
 <p>通过现有的YOLOv5 Pytorch模型对数据集进行半自动标注</p>
+
+## News
+**现已支持最新版本YOLOv5**
+
+
 
 ## YOLOv5半自动标注功能演示
 ![image](https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg/blob/master/demo/demo1.gif) 
@@ -18,7 +20,7 @@
 <p>推荐使用的Python版本：Python3.8</p>
 <p>建议使用conda环境进行操作</p>
 <p>该项目完全免费，不会且禁止进行任何商业出售</p>
-<p>注意：该项目暂时仅支持YOLOv5的Version 5版本</p>
+<p>该项目已支持最新版本YOLOv5，如需要使用支持YOLOv5 version5的旧版本，可以在Release中找到旧版本代码。</p>
 <p>切换中文版本请编辑\libs\stringBundle.py，注释第52行，取消注释54行。（原理：":/strings"替换为":/strings-zh-CN"）</p>
 
 
