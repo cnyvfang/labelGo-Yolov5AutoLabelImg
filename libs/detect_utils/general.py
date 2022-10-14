@@ -217,6 +217,9 @@ def check_imshow():
         print(f'WARNING: Environment does not support cv2.imshow() or PIL Image.show() image displays\n{e}')
         return False
 
+def check_yaml(file, suffix=('.yaml', '.yml')):
+    # Search/download YAML file (if necessary) and return path, checking suffix
+    return check_file(file, suffix)
 
 def check_file(file):
     # Search/download file (if necessary) and return path
