@@ -11,7 +11,7 @@
 ## Function demonstration of converting Yolo format to VOC format with one click
 ![image](https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg/blob/master/demo/demo2.gif) 
 
-## Attention
+## Note
 <p>If there is a problem, please put it forward in the issue.</p>
 <p>The annotation file is saved in the same location as the picture folder.</p>
 <p>Recommended version of python: python 3.8.</p>
