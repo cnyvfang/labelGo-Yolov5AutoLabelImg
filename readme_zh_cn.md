@@ -6,9 +6,9 @@
 ## News
 **现已支持最新版本YOLOv5以及classes.txt的自动生成**
 
-## YOLOv5半自动标注功能演示
+### YOLOv5半自动标注功能演示
 ![image](https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg/blob/master/demo/demo1.gif) 
-## 一键将YOLO格式标签转换为VOC格式标签功能演示
+### 一键将YOLO格式标签转换为VOC格式标签功能演示
 ![image](https://github.com/cnyvfang/labelGo-Yolov5AutoLabelImg/blob/master/demo/demo2.gif) 
 
 ## 注意
